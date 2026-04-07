@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>THRISHOOLA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .hero {
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cbd5f5;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-main {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .cta-main:hover {
+      background: #2563eb;
+    }
+
+    .cta-ghost {
+      display: inline-block;
+      padding: 15px 30px;
+      border: 1px solid #3b82f6;
+      color: #3b82f6;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .cta-ghost:hover {
+      background: #3b82f6;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <h1>Automate Your Business with AI</h1>
+
+    <p>
+      We help businesses eliminate manual work, increase conversions,
+      and scale faster using AI-powered automation systems.
+    </p>
+
+    <!-- UPDATED BUTTONS -->
+    <a href="#" onclick="openEmail()" class="cta-main">
+      Book Free Demo →
+    </a>
+
+    <a href="#" onclick="openEmail()" class="cta-ghost">
+      Send an Email
+    </a>
+  </section>
+
+  <script>
+    function openEmail() {
+      const email = "hello@thrishoola.com";
+
+      const subject = encodeURIComponent("Free Demo Request - THRISHOOLA");
+
+      const body = encodeURIComponent(
+        "Hi,\n\n" +
+        "I came across your AI automation services and would like to book a free demo.\n\n" +
+        "I explored your work here: https://hellothrishoola-creator.github.io/hellothrishoola/ and would love to understand how this can be applied to my business.\n\n" +
+        "Looking forward to connecting.\n"
+      );
+
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+</body>
+</html>
